@@ -1,2 +1,2 @@
-# https-z8hwkomcsnpfvxwxzk3etc.streamlit.app-
+# streamlit.app
 Streamlit
