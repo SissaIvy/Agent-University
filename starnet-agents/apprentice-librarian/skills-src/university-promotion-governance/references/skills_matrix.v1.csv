@@ -1,0 +1,10 @@
+skill_family,skill,capability,overlays,description,rubric_level,evidence_kind,course_tags
+perception_knowledge,schema_labeling,perception,deterministic,"Schema profiling, labeling standards, data validation; detect drift and anomalies.",3,"dataset_card|data_quality_issue|manifest_written","foundations|ml-core"
+perception_knowledge,retrieval_indexing,perception,"deterministic|allegorical","Build and evaluate inverted/vector/time-series indexes; measure retrieval quality.",3,"retrieval_eval|index_manifest|audit_card","rag|indexing"
+perception_knowledge,provenance,perception,deterministic,"Provenance tracking: checksums, headers, ETag/If-Modified-Since, run_id discipline.",3,"audit_card|source_fetch|manifest_written","foundations|governance"
+reasoning_planning,bayesian_modeling,reasoning,bayesian,"Priors/likelihoods/posteriors; uncertainty-aware decisions and comparisons.",3,"model_compare|assumptions_logged|metrics_report","planning|reasoning"
+reasoning_planning,constraint_checks,planning,deterministic,"Constraint satisfaction and feasibility under budgets/limits.",3,"decision_table|constraint_log|risk_matrix","planning|ops-safety"
+reasoning_planning,socratic_challenge,reasoning,socratic,"Self-critique and challenge of plans; enumerate alternatives and failure modes.",3,"self_critique|plan_revision|risk_matrix","reasoning"
+action_learning,safe_tool_use,action,deterministic,"Idempotent tool use, input/output validation, refusal when provenance is missing.",3,"tool_call|verify_outcome|refusal_logged","mlops|toolcalling"
+action_learning,idempotency_canary_rollback,action,"deterministic|rhl","Canary→promote, rollback readiness, budget guards, staged changes.",3,"canary_started|canary_completed|rollback_ready|budget_checked","mlops|ops-safety"
+action_learning,eval_harness_monitoring,learning,"deterministic|rhl","Reproducible evaluation harness, monitors, drift/freshness checks, KPIs.",3,"eval_run|kpi_snapshot|drift_check","evaluation|observability"

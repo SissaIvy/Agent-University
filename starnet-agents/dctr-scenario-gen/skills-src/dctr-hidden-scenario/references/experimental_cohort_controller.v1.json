@@ -1,0 +1,31 @@
+{
+  "$id": "policies/experimental_cohort_controller.v1.json",
+  "type": "university.experimental_cohort_controller",
+  "meta": {
+    "name": "ExperimentalCohortController",
+    "version": "1.0.0",
+    "owner_role": "Accelerator",
+    "description": "Blinded treatment assignment for DCTR experiments. Hides cohort labels from evaluators."
+  },
+  "extends": "scripts/accelerator_spawn_cohort.py",
+  "concept_default": "trust_boundary_reasoning",
+  "cohorts": ["taught_receiver", "untaught_control", "sham_control"],
+  "blinding": {
+    "evaluator_sees": ["candidate_id", "response_hash", "response_text"],
+    "evaluator_must_not_see": ["cohort", "treatment", "teach_pack", "agent_specialty"],
+    "gatekeeper_sees": ["anonymized_scores", "control_deltas", "auditor_report"]
+  },
+  "pilot": {
+    "size": 6,
+    "taught": 2,
+    "untaught": 2,
+    "sham": 2,
+    "domains_later": ["shadow_ai", "ai_spm", "iso_42001", "mcp_security", "agent_frameworks", "mitre_atlas"]
+  },
+  "outputs": {
+    "root": ".mm-out/accelerator-experiments",
+    "assignment_sealed": ".mm-out/accelerator-experiments/assignment_sealed.json",
+    "assignment_public": ".mm-out/accelerator-experiments/assignment_public.json",
+    "evidence": ".mm-out/accelerator-experiments/evidence.jsonl"
+  }
+}

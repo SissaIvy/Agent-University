@@ -1,0 +1,16 @@
+{
+  "min_rubric_level": 3,
+  "required_evidence": [
+    "audit_card", "verify_outcome", "gate_decision", "rollback_ready"
+  ],
+  "stage_requirements": {
+    "A04": { "must": ["source_fetch|source_fetch_error", "manifest_written"] },
+    "A05": { "must": ["data_quality_issue|profiling_report"] },
+    "A08": { "must": ["gate_decision", "rollback_ready", "approver_signoff"] },
+    "A10": { "must": ["execute_started", "execute_completed", "verify_outcome"] }
+  },
+  "coverage": {
+    "courses_tagged_min": 0.9,
+    "skills_covered_min": 0.9
+  }
+}

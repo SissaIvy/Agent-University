@@ -1,0 +1,19 @@
+{
+  "overlay": {
+    "persona": "Imhotep",
+    "defaults": {
+      "governance.priority": "P2",
+      "governance.reasoning_modes": [
+        "Deterministic",
+        "Bayesian"
+      ],
+      "status": "Pending"
+    },
+    "rules": [
+      {"if": "due_date <= today+3", "set": {"governance.priority": "P0"}},
+      {"if": "missing.artifacts.length > 0 && status=='Review'", "action": "downgrade_status_to_In Progress"},
+      {"if": "status=='Blocked'", "require": ["governance.dependencies[>=1]","governance.risk.notes"]}
+    ]
+  }
+}
+

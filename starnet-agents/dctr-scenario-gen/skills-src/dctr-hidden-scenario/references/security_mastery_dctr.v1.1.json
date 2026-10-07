@@ -1,0 +1,188 @@
+{
+  "$id": "policies/security_mastery_dctr.v1.1.json",
+  "type": "university.security_mastery_dctr",
+  "meta": {
+    "name": "DoubleBlindCrossDomainTransferRetention",
+    "version": "1.3.0-experimental",
+    "baseline_ref": "policies/security_mastery_game.v1.json",
+    "cohort_controller_ref": "policies/experimental_cohort_controller.v1.json",
+    "status": "experimental",
+    "owner_role": "Operator",
+    "description": "DCTR answers: did teaching measurably change an agent's ability to solve unfamiliar problems? Independent A09 certification is determined only from reproducible evidence and policy gates."
+  },
+  "statistical_engine": {
+    "version": "1.0.0",
+    "exact_max_combinations": 50000,
+    "monte_carlo_permutations": 20000,
+    "monte_carlo_seed": 1337,
+    "min_sample_size": 2
+  },
+  "rollback_clause": {
+    "baseline": "v1.0 simulator remains regression-only; preserve all v1.0 artifacts unchanged",
+    "experimental": "If DCTR is unstable/contaminated, revert operational decisions to v1.0 regression baseline and fix the experimental layer — not its mastery claims",
+    "failed_attempts": "preserve append-only; never overwrite"
+  },
+  "roles": {
+    "teacher": "delivers teach pack only; never builds the exam",
+    "learner": "produces responses only; never sees rubric or hidden scenario in advance",
+    "evaluator": "scores anonymized Candidate-* responses; never constructs the exam; never sees treatment labels",
+    "gatekeeper": "issues CERTIFIED/HOLD/REJECTED/ROLLED_BACK from evaluator + auditor outputs only",
+    "scenario_generator": "builds hidden exams; isolated from teacher, learner, and evaluator"
+  },
+  "cohorts": [
+    {"id": "taught_receiver", "receives": "teach_pack"},
+    {"id": "untaught_control", "receives": "none"},
+    {"id": "sham_control", "receives": "plausible_irrelevant_lesson"}
+  ],
+  "experiment_pipeline": [
+    "cohort_assign",
+    "snapshot",
+    "blind_pretest",
+    "teach",
+    "access_isolation",
+    "hidden_transfer_test",
+    "blind_evaluation",
+    "control_comparison",
+    "adversarial_mutation",
+    "delayed_retention",
+    "decision_gate"
+  ],
+  "concept": {
+    "id": "trust_boundary_reasoning",
+    "teach_surface": "mcp_tool_descriptor_governance",
+    "hidden_test_surface": "multi_agent_saas_connector_incident",
+    "forbidden_exam_terms": ["mcp", "poison", "trust boundary", "trust-boundary", "tool metadata"]
+  },
+  "thresholds": {
+    "hidden_scenario_score_min": 0.9,
+    "pretest_improvement_min": 0.2,
+    "pretest_equivalence_max_delta": 0.1,
+    "control_advantage_min": 0.15,
+    "retention_control_advantage_min": 0.15,
+    "min_receiving_agents": 2,
+    "min_domains": 2,
+    "retention_score_min": 0.85,
+    "max_critical_errors": 0,
+    "significance_alpha_max": 0.1,
+    "effect_size_d_min": 0.8,
+    "minimum_maturity_score": 70
+  },
+  "a09_gate": {
+    "authorized_gatekeeper": "GATE.university",
+    "allowed_decisions": ["CERTIFIED", "HOLD", "REJECTED", "ROLLED_BACK"]
+  },
+  "sample_policy": {
+    "min_treatment_n": 2,
+    "min_control_n": 2,
+    "min_sham_n": 2,
+    "min_receivers": 2,
+    "min_domains": 2
+  },
+  "critical_failure_policy": {
+    "reject_codes": [
+      "hidden_test_leakage",
+      "evidence_tampering",
+      "self_certification_attempt",
+      "treatment_control_leakage",
+      "duplicate_evidence_detected",
+      "replayed_successful_experiment",
+      "catastrophic_transfer_failure",
+      "evaluator_contamination",
+      "invalid_experimental_isolation"
+    ],
+    "hold_codes": [
+      "missing_retention_evidence",
+      "provenance_verification_failed",
+      "sample_insufficient"
+    ]
+  },
+  "promotion_criteria": [
+    "treatment_vs_control_significant",
+    "pre_post_gain_significant",
+    "blind_transfer_significant",
+    "retention_significant",
+    "drift_not_degraded",
+    "maturity_index_above_threshold"
+  ],
+  "maturity_index": {
+    "weights": {
+      "transfer_significance": 0.25,
+      "improvement_significance": 0.2,
+      "retention_significance": 0.25,
+      "adversarial_robustness": 0.15,
+      "evidence_completeness": 0.15
+    }
+  },
+  "benchmark": {
+    "history_path": ".mm-out/security-games-dctr/benchmark_history.jsonl",
+    "certified_baseline_id": "security_mastery_dctr_v1",
+    "drift_tolerance": {
+      "transfer": 0.02,
+      "retention": 0.02
+    },
+    "required_evidence_fields": [
+      "experiment_id",
+      "candidate_id",
+      "treatment_group",
+      "pretest_hash",
+      "pretest_score",
+      "transfer_score",
+      "hidden_scenario_hash",
+      "response_hash",
+      "control_delta",
+      "retention_score",
+      "critical_failures",
+      "timestamp",
+      "evidence_hash"
+    ]
+  },
+  "provenance_hash_contract": {
+    "canonicalization": "json_sort_keys_compact",
+    "scopes": {
+      "evidence_bundle": "experiment evidence values required for gate decisions",
+      "statistical_input": "treatment/control values and test configuration",
+      "maturity_input": "maturity metrics, weights, and formula identifier",
+      "rubric_configuration": "policy/rubric material used by evaluator",
+      "genome_record": "capability genome serialization scope"
+    }
+  },
+  "gate_outcomes": ["CERTIFIED", "HOLD", "REJECTED", "ROLLED_BACK"],
+  "deferred": {
+    "CERTIFIED": "Only after replication, cross-domain generalization, retention, and adversarial validation across multiple trials"
+  },
+  "path": [
+    "Simulator",
+    "Controlled Experiment",
+    "Transfer Verified",
+    "Replication",
+    "Cross-Domain Generalization",
+    "Retention",
+    "Adversarial Validation",
+    "Certification"
+  ],
+  "evidence_chain_fields": [
+    "teacher",
+    "teach_pack_hash",
+    "receiver",
+    "candidate_id",
+    "treatment_hash",
+    "curriculum_hash",
+    "pretest_hash",
+    "hidden_scenario_hash",
+    "response_hash",
+    "evaluator_id",
+    "rubric_version",
+    "baseline_score",
+    "post_score",
+    "control_delta",
+    "retention_score",
+    "critical_error_count",
+    "gate_result"
+  ],
+  "outputs": {
+    "root": ".mm-out/security-games-dctr",
+    "evidence": ".mm-out/security-games-dctr/evidence.jsonl",
+    "report": ".mm-out/security-games-dctr/report.json",
+    "transfer_verified": "artifacts/portable_orchestrator/TRANSFER_VERIFIED.json"
+  }
+}

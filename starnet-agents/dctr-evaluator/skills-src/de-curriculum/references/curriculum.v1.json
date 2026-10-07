@@ -1,0 +1,365 @@
+{
+  "curriculum_id": "CURR.DATA.ENGINEERING.V1",
+  "title": "Data Engineering & Intelligent Data Infrastructure",
+  "version": "1.0.0",
+  "professor_id": "PROF.DATA.ENGINEERING",
+  "academic_governor_id": "imhotep.persona",
+  "pedagogy_ref": "agents/faculty/data-engineering/pedagogy.v1.json",
+  "thesis_contract_ref": "agents/faculty/data-engineering/thesis_contract.v1.json",
+  "sequence": [
+    "DE100",
+    "DE200",
+    "DE300",
+    "DE400",
+    "DE500",
+    "DE600",
+    "DE700",
+    "DE800",
+    "DE900",
+    "DE1000"
+  ],
+  "modules": [
+    {
+      "id": "DE100",
+      "title": "Data Contracts & Source Discovery",
+      "objective": "Define sources, owners, schemas, SLAs, and evidence boundaries.",
+      "required_artifacts": [
+        "source_inventory",
+        "data_contract"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE200",
+      "title": "SQL & Relational Modeling",
+      "objective": "Design normalized and analytical relational models and demonstrate query correctness.",
+      "required_artifacts": [
+        "schema_design",
+        "sql_artifact",
+        "validation_results"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE300",
+      "title": "Batch ETL/ELT Pipelines",
+      "objective": "Build an idempotent batch pipeline with explicit inputs, outputs, failure behavior, and tests.",
+      "required_artifacts": [
+        "pipeline_artifact",
+        "test_results",
+        "run_evidence"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE400",
+      "title": "Warehouse & Lakehouse Modeling",
+      "objective": "Design governed analytical storage with dimensional or equivalent modeling and lineage.",
+      "required_artifacts": [
+        "architecture_record",
+        "model_artifact",
+        "lineage_map"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE500",
+      "title": "Orchestration, Retry & Idempotency",
+      "objective": "Demonstrate dependency control, retry safety, deduplication, and recovery.",
+      "required_artifacts": [
+        "orchestration_artifact",
+        "failure_injection_evidence",
+        "recovery_evidence"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE600",
+      "title": "Streaming & Change Data Capture",
+      "objective": "Design an event/CDC pipeline with ordering, replay, schema evolution, and failure controls.",
+      "required_artifacts": [
+        "stream_design",
+        "schema_evolution_plan",
+        "replay_evidence"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE700",
+      "title": "Data Quality, Observability & Lineage",
+      "objective": "Implement measurable quality rules, observability, incident evidence, and lineage.",
+      "required_artifacts": [
+        "quality_contract",
+        "observability_artifact",
+        "lineage_evidence"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE800",
+      "title": "Governance, Privacy & Security",
+      "objective": "Apply least privilege, classification, retention, access controls, and auditability.",
+      "required_artifacts": [
+        "governance_matrix",
+        "access_model",
+        "audit_evidence"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE900",
+      "title": "AI Data Infrastructure",
+      "objective": "Design ingestion, provenance, retrieval, embedding/vector, evaluation-data, or agent-memory infrastructure without losing source traceability.",
+      "required_artifacts": [
+        "ai_data_architecture",
+        "provenance_record",
+        "evaluation_plan"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    },
+    {
+      "id": "DE1000",
+      "title": "Enterprise Data Platform Capstone",
+      "objective": "Integrate the curriculum into an unfamiliar enterprise data-platform problem and defend the design under independent review.",
+      "required_artifacts": [
+        "capstone_architecture",
+        "working_artifact_or_executable_plan",
+        "test_evidence",
+        "rollback_plan"
+      ],
+      "pedagogy_cycle": [
+        "Discover",
+        "Model",
+        "Build",
+        "Break",
+        "Diagnose",
+        "Repair",
+        "Explain",
+        "Transfer",
+        "Defend"
+      ],
+      "evaluation": {
+        "evaluator_role": "independent_evaluator",
+        "dimensions": [
+          "correctness",
+          "traceability",
+          "dependency_integrity",
+          "governance",
+          "failure_handling",
+          "explainability"
+        ],
+        "critical_failure_rule": "Any unresolved critical correctness, security, privacy, lineage, or reproducibility defect blocks module passage."
+      }
+    }
+  ],
+  "transfer_requirement": {
+    "required": true,
+    "per_student": true,
+    "rule": "Each student must independently apply a learned principle to an unfamiliar data-engineering scenario before cohort-thesis eligibility."
+  },
+  "cohort_thesis": {
+    "required": true,
+    "contract_id": "THESIS.DATA.ENGINEERING.COHORT.V1",
+    "supervisor": "PROF.DATA.ENGINEERING",
+    "final_validator": "imhotep.persona"
+  },
+  "final_state_rule": "Program completion requires real student-produced artifacts for every module, independent evaluation, per-student transfer evidence, a cohort thesis, professor disciplinary readiness recommendation, and IMHOTEP final thesis validation. Matriculation or assignment issuance is not evidence of learning."
+}

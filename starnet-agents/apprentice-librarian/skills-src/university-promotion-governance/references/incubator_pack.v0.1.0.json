@@ -1,0 +1,26 @@
+{
+  "archetype": "IncubatorPack",
+  "version": "0.1.0",
+  "meta": {
+    "title": "University Incubator — Promote→Specialize→Replicate",
+    "owner_role": "DeanLibrarian",
+    "description": "When agents are PROMOTED, bind them to a SOC specialty and spawn pupils with teach packs."
+  },
+  "policy": {
+    "ooh_required": true,
+    "ep_optional": true,
+    "min_rubric_level": 3,
+    "required_evidence": ["audit_card", "verify_outcome", "gate_decision", "rollback_ready"],
+    "spawn_max": 3
+  },
+  "inputs": {
+    "ooh_csv": ".mm-out/bls/ooh_occupations.csv",
+    "kb_manifest": ".mm-out/bls/kb_manifest.csv",
+    "profiles_glob": "agents/profiles/**/agent.@(json|yaml|yml)"
+  },
+  "outputs": {
+    "evidence": ".mm-out/incubator/evidence.jsonl",
+    "specialty_dir": "agents/specialties",
+    "pupils_dir": "agents/pupils"
+  }
+}
