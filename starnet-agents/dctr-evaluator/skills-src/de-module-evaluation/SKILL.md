@@ -22,10 +22,10 @@ Your evaluator id must not be the student, PROF.DATA.ENGINEERING, or imhotep.per
 7. **Transfer challenges:** confirm the scenario was unfamiliar and no worked solution was available. Judge whether the principle was genuinely applied, not pattern-matched.
 
 ## Evaluation JSON (the controller requires `evaluator_id`, boolean `passed`, list `critical_failures`)
-    {{ "evaluator_id": "<your evaluator id>", "student_id": "DE-STU-0NN", "module": "DE###",
-      "passed": false, "critical_failures": [{{"type": "lineage", "detail": "…", "location": "…"}}],
-      "dimensions": {{"correctness": {{"pass": true, "basis": "…"}}, "traceability": {{"pass": false, "basis": "…"}}}},
-      "executed_vs_proposed_notes": "…", "remediation": ["…"], "evaluated_at": "…" }}
+    { "evaluator_id": "<your evaluator id>", "student_id": "DE-STU-0NN", "module": "DE###",
+      "passed": false, "critical_failures": [{"type": "lineage", "detail": "…", "location": "…"}],
+      "dimensions": {"correctness": {"pass": true, "basis": "…"}, "traceability": {"pass": false, "basis": "…"}},
+      "executed_vs_proposed_notes": "…", "remediation": ["…"], "evaluated_at": "…" }
 
 Save it as a file. The Commander records it with `evaluate --student … --module … --result <file>`, or with `evaluate-transfer` for transfer challenges.
 

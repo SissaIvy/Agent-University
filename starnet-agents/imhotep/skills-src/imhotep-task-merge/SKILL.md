@@ -22,7 +22,7 @@ Folds newly extracted or proposed tasks into an existing container so history an
        { "meta": {"merged_at":"…","base_source":"…","proposal_source":"…"},
          "added": ["A08_…"], "updated": [{"key":"A06_…","fields":["status"]}],
          "collisions": [{"original":"A06_…","new_key":"A06_…_b"}],
-         "result": { "meta": {...}, "tasks": {...} } }
+         "result": { "meta": {"version": "…", "persona": "Imhotep"}, "tasks": {"A06_…": {"task_name": "…"}} } }
 
 ## Rules
 - Provenance is sacred: a merged task keeps every source reference it ever had. If two sources matter, link the second as an artifact.
