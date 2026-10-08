@@ -1,0 +1,63 @@
+{
+  "contract_id": "THESIS.DATA.ENGINEERING.COHORT.V1",
+  "title": "Cohort Thesis — Governed Enterprise Data Platform",
+  "version": "1.0.0",
+  "validator": "imhotep.persona",
+  "supervisor": "PROF.DATA.ENGINEERING",
+  "thesis_question": "Can this cohort design and defend an enterprise data platform whose data lineage, transformations, dependencies, reliability controls, governance, observability, AI-data interfaces, and recovery behavior are reconstructable from evidence?",
+  "eligibility": [
+    "Each of the 10 students has independently passed every required curriculum module or has an explicitly approved documented equivalent",
+    "Every student has passed an unfamiliar transfer challenge",
+    "Zero unresolved critical correctness, privacy, security, lineage, reproducibility, or governance defects",
+    "All required module evidence is bound to student and cohort identities",
+    "Professor has issued a disciplinary readiness recommendation"
+  ],
+  "required_sections": [
+    "problem_and_decision_context",
+    "source_and_data_contracts",
+    "logical_and_physical_data_model",
+    "batch_ingestion_and_transformation",
+    "streaming_or_cdc_design",
+    "orchestration_retry_idempotency",
+    "data_quality_observability_and_lineage",
+    "security_privacy_governance",
+    "ai_data_infrastructure",
+    "failure_injection_and_recovery",
+    "operability_cost_and_capacity_assumptions",
+    "tradeoffs_rejected_alternatives_and_unknowns",
+    "reproducibility_package",
+    "rollback_and_recovery_plan",
+    "limitations_and_validity_boundaries"
+  ],
+  "contribution_rule": "All ten students must have a named, hashed contribution mapped to at least one thesis section, and the integrated thesis must explain cross-specialty dependencies.",
+  "defense_rule": "The cohort must provide a defense artifact addressing evaluator challenges, contradictions, assumptions, evidence gaps, and at least one alternative architecture.",
+  "imhotep_validation": {
+    "dimensions": [
+      "identity_and_provenance_complete",
+      "required_evidence_present",
+      "a01_a12_continuity",
+      "dependency_integrity",
+      "critical_conflicts_resolved",
+      "independent_evaluation_present",
+      "student_contribution_coverage",
+      "reproducibility_package_present",
+      "rollback_available",
+      "limitations_explicit"
+    ],
+    "outcomes": [
+      "VALIDATED",
+      "VALIDATED_WITH_CONDITIONS",
+      "HOLD",
+      "REJECTED"
+    ],
+    "hard_stops": [
+      "missing_required_evidence",
+      "unresolved_critical_failure",
+      "unattributed_student_contribution",
+      "self_evaluation_substituted_for_independent_evaluation",
+      "thesis_artifact_changed_after_validation_hash",
+      "missing_reproducibility_or_rollback_evidence"
+    ]
+  },
+  "evidence_boundary": "IMHOTEP validates the evidence/provenance/governance sufficiency of the final thesis. The professor supplies disciplinary supervision and readiness recommendation; independent evaluators supply module and transfer evidence."
+}

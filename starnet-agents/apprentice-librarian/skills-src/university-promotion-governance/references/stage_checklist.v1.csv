@@ -1,0 +1,13 @@
+stage,stage_name,must_have_artifacts,exit_gate,evidence_kinds
+A01,Discover,"intake_record; owner; scope_seed","scope accepted with owner","discover_opened|scope_seed|stakeholders_listed"
+A02,Frame,"constraints; objectives; overlays","scope sign-off","scope_framed|overlay_selected|constraints_logged"
+A03,Plan,"plan_doc; guardrails_plan; eval_plan","plan approved","plan_proposed|guardrails_plan|eval_plan"
+A04,Data,"source_list; provenance; evidence ledger","required sources present or skip with evidence","source_fetch|source_fetch_error|manifest_written|audit_card"
+A05,Screen,"profiling_report; schema_checks; normalization_log","quality acceptable or bounded","data_quality_issue|profiling_report|normalization_log"
+A06,Model/Evaluation,"eval_runs; assumptions; metrics_report","meets threshold or defer","eval_run|assumptions_logged|metrics_report"
+A07,Risk,"risk_matrix; safety_check; pii_review","acceptable risk with mitigations","risk_matrix|safety_check|pii_redaction_review"
+A08,Gate,"gate_decision; rollback_ready; approvals","approved for canary","gate_decision|rollback_ready|approver_signoff"
+A09,Canary,"canary_plan; monitoring; budget guards","canary success→promote or rollback","canary_started|canary_completed|budget_checked|observability_links"
+A10,Execute,"runbook; execute logs; verify_outcome","applied with verification","execute_started|execute_completed|verify_outcome|artifacts_manifest"
+A11,Monitor,"observability dashboards; drift/freshness checks; kpi_snapshot","stable ops; anomalies ticketed","drift_check|freshness_check|kpi_snapshot"
+A12,Review,"retrospective; lessons_learned; gate_update","closed loop; standards updated","retro_written|lessons_learned|gate_update"

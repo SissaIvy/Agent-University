@@ -1,0 +1,134 @@
+{
+  "pedagogy_id": "PED.DATA.ENGINEERING.IMHOTEP.V1",
+  "title": "Data Engineering Reverse-Scaffold Pedagogy",
+  "version": "1.0.0",
+  "co_creators": [
+    {
+      "id": "imhotep.persona",
+      "role": "Academic Governor / Matriculation & Thesis Validator",
+      "source": "ops/personas/imhotep/imhotep.persona.json"
+    },
+    {
+      "id": "PROF.DATA.ENGINEERING",
+      "role": "Data Engineering & Intelligent Data Infrastructure Faculty Lead",
+      "source": "agents/faculty/data-engineering/professor.json"
+    }
+  ],
+  "governing_dna": "policies/master_process.dna.v1.json",
+  "educational_thesis": "Students should not be promoted for reproducing explanations. They must produce traceable data-engineering artifacts, survive failure-oriented evaluation, transfer principles to unfamiliar conditions, and integrate the cohort's specialties into a defensible final thesis.",
+  "reverse_scaffold": {
+    "final_state": "A cohort can defend an evidence-backed enterprise data platform thesis whose sources, transformations, dependencies, security controls, failure behavior, observability, lineage, AI-data interfaces, limitations, and rollback can be reconstructed.",
+    "backward_design": [
+      "Define thesis acceptance contract and invalidation conditions",
+      "Define integration competencies needed for the thesis",
+      "Define module-level evidence needed to establish each competency",
+      "Define labs that force construction, failure, diagnosis, recovery, explanation, and transfer",
+      "Matriculate only after identities, curriculum, governance, evidence rules, and thesis contract are bound"
+    ],
+    "forward_learning_cycle": [
+      "Discover",
+      "Model",
+      "Build",
+      "Break",
+      "Diagnose",
+      "Repair",
+      "Explain",
+      "Transfer",
+      "Defend",
+      "Integrate"
+    ]
+  },
+  "instructional_methods": [
+    {
+      "id": "evidence_first_lab",
+      "rule": "Every technical claim tied to a working artifact must distinguish executed evidence from proposed design."
+    },
+    {
+      "id": "failure_injection",
+      "rule": "Core pipeline/orchestration modules require at least one controlled failure case and recovery analysis when execution is available."
+    },
+    {
+      "id": "socratic_design_defense",
+      "rule": "Students must state assumptions, rejected alternatives, dependencies, risks, and evidence gaps."
+    },
+    {
+      "id": "cross_specialty_peer_review",
+      "rule": "Each student must review at least one artifact outside its specialization; peer review is advisory and cannot replace independent evaluation."
+    },
+    {
+      "id": "transfer_challenge",
+      "rule": "Before thesis eligibility, each student must apply a learned principle to an unfamiliar data-engineering scenario without access to the original worked solution."
+    },
+    {
+      "id": "cohort_integration",
+      "rule": "The final thesis must integrate contributions from all ten student specialties into one coherent governed platform argument."
+    }
+  ],
+  "role_separation": {
+    "professor": {
+      "owns": [
+        "instruction",
+        "assignment design",
+        "formative feedback",
+        "disciplinary mentoring",
+        "thesis supervision"
+      ],
+      "cannot": [
+        "self-certify module mastery",
+        "issue final matriculation decision",
+        "validate final cohort thesis alone"
+      ]
+    },
+    "independent_evaluator": {
+      "owns": [
+        "module artifact evaluation",
+        "transfer evaluation",
+        "critical defect classification"
+      ],
+      "cannot": [
+        "alter student submission",
+        "issue final thesis validation"
+      ]
+    },
+    "imhotep": {
+      "owns": [
+        "matriculation",
+        "pedagogy governance review",
+        "provenance continuity",
+        "A-code gate integrity",
+        "final cohort thesis validation"
+      ],
+      "cannot": [
+        "invent student work",
+        "replace disciplinary evidence with governance compliance",
+        "approve missing required evidence"
+      ]
+    }
+  },
+  "a_code_mapping": {
+    "A01_intake": "Register cohort, students, faculty, and thesis intent",
+    "A02_alignment": "Bind mission, learning goals, constraints, and evidence rules",
+    "A03_scoping": "Define module outcomes, thesis boundaries, and success criteria",
+    "A04_data_gather": "Collect source material, datasets, specifications, and prior evidence",
+    "A05_screen": "Check prerequisites, provenance, integrity, and obvious gaps",
+    "A06_evaluate": "Evaluate artifacts and alternative designs using independent evidence",
+    "A07_risk": "Assess correctness, security, privacy, operational, lineage, and failure risks",
+    "A08_options": "Compare architectural alternatives and remediation paths",
+    "A09_decision_gate": "Matriculation, module progression exceptions, and thesis gate decisions",
+    "A10_execute": "Build/run approved labs, pipelines, and thesis components",
+    "A11_monitor": "Track quality, execution evidence, drift, failures, and learning progress",
+    "A12_review": "Retrospective; update pedagogy only from documented cohort evidence"
+  },
+  "pedagogy_effectiveness_measures": [
+    "module artifact pass rate by first attempt and after remediation",
+    "critical defect escape rate",
+    "transfer challenge pass rate",
+    "cross-specialty integration defect count",
+    "thesis evidence completeness",
+    "thesis reproducibility",
+    "confidence calibration where probabilistic judgments are used",
+    "remediation effectiveness"
+  ],
+  "effectiveness_boundary": "Pedagogy approval establishes governance/design fitness only. It does not establish educational effectiveness until observed cohort evidence exists.",
+  "rollback": "If evidence shows a teaching method harms transfer, traceability, correctness, or thesis quality, revert that method to the prior version while preserving the cohort evidence and A12 review."
+}

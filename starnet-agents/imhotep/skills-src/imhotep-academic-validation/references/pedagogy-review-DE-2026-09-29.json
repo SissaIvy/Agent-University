@@ -1,0 +1,40 @@
+{
+  "review_id": "PED-REVIEW-DE-2026-09-29-IMHOTEP-001",
+  "reviewed_artifact": "agents/faculty/data-engineering/pedagogy.v1.json",
+  "reviewer": "imhotep.persona",
+  "execution_mode": "deterministic_persona_policy_instantiation",
+  "native_imhotep_service_observed": false,
+  "source_policies": [
+    "ops/personas/imhotep/imhotep.persona.json",
+    "policies/master_process.dna.v1.json"
+  ],
+  "decision": "APPROVED_WITH_CONTROLS",
+  "findings": [
+    {
+      "control": "A01-A12 continuity",
+      "result": "PASS",
+      "basis": "Pedagogy explicitly maps matriculation, learning, evaluation, execution, monitoring, and review to A01-A12."
+    },
+    {
+      "control": "role separation",
+      "result": "PASS",
+      "basis": "Professor, independent evaluator, and IMHOTEP authorities are distinct."
+    },
+    {
+      "control": "evidence before decision",
+      "result": "PASS",
+      "basis": "No module, transfer, or thesis success can be asserted without external artifacts/evaluation."
+    },
+    {
+      "control": "rollback",
+      "result": "PASS",
+      "basis": "Pedagogy version can be reverted while preserving evidence and A12 lessons."
+    },
+    {
+      "control": "educational effectiveness",
+      "result": "UNPROVEN",
+      "basis": "No cohort has yet generated observed learning or thesis evidence under this pedagogy."
+    }
+  ],
+  "condition": "Treat this as approved pedagogy architecture, not proof that the pedagogy improves learning. A12 must compare observed cohort outcomes against the stated effectiveness measures."
+}

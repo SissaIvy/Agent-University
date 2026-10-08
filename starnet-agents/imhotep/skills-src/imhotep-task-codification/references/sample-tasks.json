@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "generated_at": "2025-09-22T21:35:00Z",
+    "persona": "Imhotep"
+  },
+  "tasks": {
+    "A01_SchemaEnforcement": {
+      "task_name": "Adopt canonical task schema in repo",
+      "owner": "Imhotep",
+      "status": "In Progress",
+      "source_reference": "Meeting 2025-09-22",
+      "memory_correlation": {
+        "neuron": "task_schema.v1",
+        "date": "2025-09-22",
+        "context": "Baseline schema to unify tasks across personas; enables gate enforcement."
+      },
+      "governance": {
+        "priority": "P0",
+        "due_date": "2025-09-25",
+        "dependencies": [],
+        "risk": {"level": "Low", "notes": "Adoption PR reviews"},
+        "kpi": ["schema_validation_pass_rate"],
+        "reasoning_modes": ["Deterministic", "Socratic"]
+      },
+      "artifacts": [
+        {"type": "doc", "label": "Schema File", "url": "ops/personas/imhotep/task-object.schema.json"}
+      ],
+      "audit": {
+        "created_by": "agent",
+        "created_at": "2025-09-22T21:30:00Z",
+        "last_updated_at": "2025-09-22T21:30:00Z"
+      }
+    },
+    "A06_ValidationCI": {
+      "task_name": "Add JSON schema validation to CI",
+      "owner": "Imhotep",
+      "status": "Pending",
+      "source_reference": "Ticket OPS-142",
+      "memory_correlation": {
+        "neuron": "ci_guardrails.v1",
+        "date": "2025-09-22",
+        "context": "Prevent malformed tasks entering main; report coverage."
+      },
+      "governance": {
+        "priority": "P1",
+        "due_date": "2025-09-27",
+        "dependencies": ["A01_SchemaEnforcement"],
+        "risk": {"level": "Low", "notes": "CI config drift"},
+        "kpi": ["schema_validation_pass_rate", "gate_defect_escape_rate"],
+        "reasoning_modes": ["Deterministic"]
+      },
+      "artifacts": []
+    }
+  }
+}
+

@@ -1,0 +1,64 @@
+{
+  "_note": "Derived default mapping of thesis sections to student specialties (not a University record; the professor assigns the final mapping).",
+  "sections": {
+    "problem_and_decision_context": [
+      "DE-STU-010"
+    ],
+    "source_and_data_contracts": [
+      "DE-STU-001"
+    ],
+    "logical_and_physical_data_model": [
+      "DE-STU-002",
+      "DE-STU-007"
+    ],
+    "batch_ingestion_and_transformation": [
+      "DE-STU-001"
+    ],
+    "streaming_or_cdc_design": [
+      "DE-STU-003"
+    ],
+    "orchestration_retry_idempotency": [
+      "DE-STU-005"
+    ],
+    "data_quality_observability_and_lineage": [
+      "DE-STU-004",
+      "DE-STU-008"
+    ],
+    "security_privacy_governance": [
+      "DE-STU-006"
+    ],
+    "ai_data_infrastructure": [
+      "DE-STU-009"
+    ],
+    "failure_injection_and_recovery": [
+      "DE-STU-004"
+    ],
+    "operability_cost_and_capacity_assumptions": [
+      "DE-STU-010"
+    ],
+    "tradeoffs_rejected_alternatives_and_unknowns": [
+      "DE-STU-010"
+    ],
+    "reproducibility_package": [
+      "DE-STU-008"
+    ],
+    "rollback_and_recovery_plan": [
+      "DE-STU-005"
+    ],
+    "limitations_and_validity_boundaries": [
+      "DE-STU-010"
+    ]
+  },
+  "specialties": {
+    "DE-STU-001": "Ingestion & Source Integration",
+    "DE-STU-002": "Warehouse & Analytical Modeling",
+    "DE-STU-003": "Streaming & CDC",
+    "DE-STU-004": "Data Quality & Reliability",
+    "DE-STU-005": "Orchestration & Recovery",
+    "DE-STU-006": "Governance & Data Security",
+    "DE-STU-007": "Data Modeling & SQL",
+    "DE-STU-008": "Observability & Lineage",
+    "DE-STU-009": "AI / RAG Data Infrastructure",
+    "DE-STU-010": "Enterprise Data Platform Architecture"
+  }
+}

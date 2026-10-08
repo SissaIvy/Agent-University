@@ -1,0 +1,83 @@
+{
+  "_provenance": "Extract of aml/agents/faculty/data-engineering/thesis_contract.v1.json and pedagogy.v1.json (role_separation)",
+  "contract_id": "THESIS.DATA.ENGINEERING.COHORT.V1",
+  "validator": "imhotep.persona",
+  "supervisor": "PROF.DATA.ENGINEERING",
+  "eligibility": [
+    "Each of the 10 students has independently passed every required curriculum module or has an explicitly approved documented equivalent",
+    "Every student has passed an unfamiliar transfer challenge",
+    "Zero unresolved critical correctness, privacy, security, lineage, reproducibility, or governance defects",
+    "All required module evidence is bound to student and cohort identities",
+    "Professor has issued a disciplinary readiness recommendation"
+  ],
+  "imhotep_validation": {
+    "dimensions": [
+      "identity_and_provenance_complete",
+      "required_evidence_present",
+      "a01_a12_continuity",
+      "dependency_integrity",
+      "critical_conflicts_resolved",
+      "independent_evaluation_present",
+      "student_contribution_coverage",
+      "reproducibility_package_present",
+      "rollback_available",
+      "limitations_explicit"
+    ],
+    "outcomes": [
+      "VALIDATED",
+      "VALIDATED_WITH_CONDITIONS",
+      "HOLD",
+      "REJECTED"
+    ],
+    "hard_stops": [
+      "missing_required_evidence",
+      "unresolved_critical_failure",
+      "unattributed_student_contribution",
+      "self_evaluation_substituted_for_independent_evaluation",
+      "thesis_artifact_changed_after_validation_hash",
+      "missing_reproducibility_or_rollback_evidence"
+    ]
+  },
+  "evidence_boundary": "IMHOTEP validates the evidence/provenance/governance sufficiency of the final thesis. The professor supplies disciplinary supervision and readiness recommendation; independent evaluators supply module and transfer evidence.",
+  "role_separation": {
+    "professor": {
+      "owns": [
+        "instruction",
+        "assignment design",
+        "formative feedback",
+        "disciplinary mentoring",
+        "thesis supervision"
+      ],
+      "cannot": [
+        "self-certify module mastery",
+        "issue final matriculation decision",
+        "validate final cohort thesis alone"
+      ]
+    },
+    "independent_evaluator": {
+      "owns": [
+        "module artifact evaluation",
+        "transfer evaluation",
+        "critical defect classification"
+      ],
+      "cannot": [
+        "alter student submission",
+        "issue final thesis validation"
+      ]
+    },
+    "imhotep": {
+      "owns": [
+        "matriculation",
+        "pedagogy governance review",
+        "provenance continuity",
+        "A-code gate integrity",
+        "final cohort thesis validation"
+      ],
+      "cannot": [
+        "invent student work",
+        "replace disciplinary evidence with governance compliance",
+        "approve missing required evidence"
+      ]
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "decision_id": "IMHOTEP-MATRICULATION-DE-2026-09-29-001",
+  "cohort_id": "DE-2026-09-29",
+  "authority": "imhotep.persona",
+  "decision": "MATRICULATED",
+  "recorded_date": "2026-09-29",
+  "execution_mode": "deterministic_persona_policy_instantiation",
+  "native_imhotep_service_observed": false,
+  "scope": "Academic matriculation only: verifies identities, bindings, governance, evidence rules, and thesis contract. It makes no capability or mastery claim.",
+  "governing_sources": [
+    {
+      "path": "ops/personas/imhotep/imhotep.persona.json",
+      "git_blob_sha": "ca00be0d225caae910a9704e2e923e45d3848d0f"
+    },
+    {
+      "path": "policies/master_process.dna.v1.json",
+      "git_blob_sha": "c9a22266b0a103c2ae72931c8d8a115d7b9bffd0"
+    }
+  ],
+  "reviewed_artifacts": [
+    {
+      "path": "agents/faculty/data-engineering/professor.json",
+      "git_blob_sha": "015a114696565c627f4312fd8d210792d5b598c5"
+    },
+    {
+      "path": "agents/faculty/data-engineering/curriculum.v1.json",
+      "git_blob_sha": "a3ec8d0dc4914a91ed9ffea5bb4ae259025f8c0c"
+    },
+    {
+      "path": "agents/faculty/data-engineering/pedagogy.v1.json",
+      "git_blob_sha": "4509517b1f555140553c4b54b0fc5a927a56d071"
+    },
+    {
+      "path": "agents/faculty/data-engineering/thesis_contract.v1.json",
+      "git_blob_sha": "82315315c66b7fb5d1c060d81e72c273c5a66488"
+    },
+    {
+      "path": "agents/faculty/data-engineering/pedagogy_review.imhotep.v1.json",
+      "git_blob_sha": "ee264d04b06dad800022f34cf1679c996fd90b67"
+    },
+    {
+      "path": "agents/cohorts/DE-2026-09-29/cohort.json",
+      "git_blob_sha": "29dcaf04ba44cb9ab853d537f0ba4f9d476485bc"
+    }
+  ],
+  "checks": [
+    {
+      "id": "M01",
+      "name": "cohort_identity",
+      "result": "PASS",
+      "evidence": "Cohort DE-2026-09-29 exists and declares exactly 10 students."
+    },
+    {
+      "id": "M02",
+      "name": "student_identity_uniqueness",
+      "result": "PASS",
+      "evidence": "DE-STU-001 through DE-STU-010 are distinct persistent repository profiles."
+    },
+    {
+      "id": "M03",
+      "name": "faculty_binding",
+      "result": "PASS",
+      "evidence": "All students and cohort bind to PROF.DATA.ENGINEERING."
+    },
+    {
+      "id": "M04",
+      "name": "academic_governor_binding",
+      "result": "PASS",
+      "evidence": "Cohort, professor, curriculum, and students bind to imhotep.persona."
+    },
+    {
+      "id": "M05",
+      "name": "pedagogy_contract",
+      "result": "PASS",
+      "evidence": "PED.DATA.ENGINEERING.IMHOTEP.V1 exists with A01-A12 mapping and rollback."
+    },
+    {
+      "id": "M06",
+      "name": "thesis_contract",
+      "result": "PASS",
+      "evidence": "THESIS.DATA.ENGINEERING.COHORT.V1 exists and names IMHOTEP final validator."
+    },
+    {
+      "id": "M07",
+      "name": "evidence_boundary",
+      "result": "PASS",
+      "evidence": "Students remain UNASSESSED; no grades, mastery scores, or pass fields are pre-populated."
+    },
+    {
+      "id": "M08",
+      "name": "role_separation",
+      "result": "PASS",
+      "evidence": "Professor teaches/supervises; independent evaluator evaluates modules/transfer; IMHOTEP matriculates and validates final cohort thesis."
+    }
+  ],
+  "residual_conditions": [
+    "No student capability has been established by matriculation.",
+    "Educational effectiveness remains unproven until observed cohort evidence exists.",
+    "Final thesis validation cannot occur until module, transfer, thesis, defense, reproducibility, and professor-readiness evidence exists."
+  ],
+  "next_state": "AWAITING_STUDENT_RUNS"
+}
