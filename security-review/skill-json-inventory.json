@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "repo_root": "/agent/repos/Agent-University",
+    "skill_package_count": 57,
+    "formats": {
+      "open-agent-skill-package/v1": 57
+    },
+    "top_key_shapes": [
+      {
+        "keys": [
+          "format",
+          "digest",
+          "bytes",
+          "metadata",
+          "files"
+        ],
+        "count": 57
+      }
+    ],
+    "packaged_file_total": 118,
+    "extensions": {
+      ".md": 57,
+      ".json": 57,
+      ".csv": 4
+    },
+    "packages_with_path_issues": [],
+    "packages_with_tool_grants": [],
+    "packages_with_secret_valueish": [],
+    "packages_with_executable_hints": [],
+    "unique_digest_count": 19,
+    "shared_digests": [
+      {
+        "digest": "60282b5377f48d0f\u2026",
+        "count": 12,
+        "paths": [
+          "starnet-agents/dctr-evaluator/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-001/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-002/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-003/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-004/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-005/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-006/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-007/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-008/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-009/skills/de-curriculum.skill.json",
+          "starnet-agents/de-stu-010/skills/de-curriculum.skill.json",
+          "starnet-agents/prof-data-engineering/skills/de-curriculum.skill.json"
+        ]
+      },
+      {
+        "digest": "1f841bc7bb66510b\u2026",
+        "count": 11,
+        "paths": [
+          "starnet-agents/de-stu-001/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-002/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-003/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-004/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-005/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-006/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-007/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-008/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-009/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/de-stu-010/skills/de-cohort-thesis.skill.json",
+          "starnet-agents/prof-data-engineering/skills/de-cohort-thesis.skill.json"
+        ]
+      },
+      {
+        "digest": "18e2b55e5e9d6cf6\u2026",
+        "count": 11,
+        "paths": [
+          "starnet-agents/de-stu-001/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-002/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-003/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-004/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-005/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-006/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-007/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-008/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-009/skills/de-module-work.skill.json",
+          "starnet-agents/de-stu-010/skills/de-module-work.skill.json",
+          "starnet-agents/prof-data-engineering/skills/de-module-work.skill.json"
+        ]
+      },
+      {
+        "digest": "12daa70baa317792\u2026",
+        "count": 5,
+        "paths": [
+          "starnet-agents/dctr-evaluator/skills/dctr-protocol.skill.json",
+          "starnet-agents/dctr-gatekeeper/skills/dctr-protocol.skill.json",
+          "starnet-agents/dctr-learner/skills/dctr-protocol.skill.json",
+          "starnet-agents/dctr-scenario-gen/skills/dctr-protocol.skill.json",
+          "starnet-agents/dctr-teacher/skills/dctr-protocol.skill.json"
+        ]
+      },
+      {
+        "digest": "abfe5fe30f05ea09\u2026",
+        "count": 3,
+        "paths": [
+          "starnet-agents/apprentice-librarian/skills/university-library-workflow.skill.json",
+          "starnet-agents/computer-data-scientist/skills/university-library-workflow.skill.json",
+          "starnet-agents/dean-librarian/skills/university-library-workflow.skill.json"
+        ]
+      },
+      {
+        "digest": "b67d512deacb931c\u2026",
+        "count": 2,
+        "paths": [
+          "starnet-agents/apprentice-librarian/skills/university-promotion-governance.skill.json",
+          "starnet-agents/dean-librarian/skills/university-promotion-governance.skill.json"
+        ]
+      }
+    ],
+    "by_agent": {
+      "apprentice-librarian": [
+        "university-library-workflow",
+        "university-promotion-governance"
+      ],
+      "codespace-developer": [
+        "codespace-devcontainer-setup"
+      ],
+      "computer-data-scientist": [
+        "teach-pack-reproduction",
+        "university-library-workflow"
+      ],
+      "dctr-evaluator": [
+        "dctr-blind-evaluation",
+        "dctr-protocol",
+        "de-curriculum",
+        "de-module-evaluation"
+      ],
+      "dctr-gatekeeper": [
+        "dctr-a09-gate",
+        "dctr-protocol"
+      ],
+      "dctr-learner": [
+        "dctr-learner-response",
+        "dctr-protocol"
+      ],
+      "dctr-scenario-gen": [
+        "dctr-hidden-scenario",
+        "dctr-protocol"
+      ],
+      "dctr-teacher": [
+        "dctr-protocol",
+        "dctr-teach-delivery"
+      ],
+      "de-stu-001": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-002": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-003": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-004": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-005": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-006": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-007": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-008": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-009": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "de-stu-010": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work"
+      ],
+      "dean-librarian": [
+        "university-library-workflow",
+        "university-promotion-governance"
+      ],
+      "imhotep": [
+        "imhotep-academic-validation",
+        "imhotep-gate-promotion",
+        "imhotep-task-codification",
+        "imhotep-task-merge"
+      ],
+      "prof-data-engineering": [
+        "de-cohort-thesis",
+        "de-curriculum",
+        "de-module-work",
+        "de-professor-teaching"
+      ]
+    }
+  }
+}
